@@ -1,0 +1,11 @@
+<head>
+    <title>SimpleSite{{ if .Title }} | {{ .Title}}{{ end }}</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="theme-color" content="#009688">
+
+    {{ $combinedCss := slice (resources.Get "css/theme-base.css") (resources.Get "css/theme-mobile.css") (resources.Get "css/theme-color.css") | resources.Concat "css/styles.css" -}}
+    <link rel="stylesheet" href="{{ ($combinedCss | minify | fingerprint "md5").RelPermalink }}">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+</head>

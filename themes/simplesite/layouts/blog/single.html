@@ -1,0 +1,24 @@
+{{ define "main" }}
+    <section class="alt">
+        <article class="blog">
+            <h1>{{ .Title }}</h1>
+            <h3 class="tags">
+                <span>{{ .Date.Format "January 2, 2006" }}</span>
+                <span>Tags: {{ range .Params.tags }}<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{ end }}</span>
+            </h3>
+        </article>
+    </section>
+    <section>
+        <article class="blog">
+        {{ .Content }}
+        </article>
+        <article style="text-align: center;">
+        {{ with .Prev -}}
+            &lt;&lt; <a href="{{ .RelPermalink }}">{{ .Title }}</a>&nbsp;::&nbsp;
+        {{- end -}}
+        {{- with .Next -}}
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a> &gt;&gt;
+        {{- end }}
+        </article>
+    </section>
+{{ end }}

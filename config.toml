@@ -1,0 +1,32 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "SimpleSite example site"
+theme = "simplesite"
+paginate = 10
+
+[blackfriday]
+  plainIDAnchors = true
+  hrefTargetBlank = true
+
+[permalinks]
+  blog = "/blog/:year/:month/:filename/"
+
+[[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+[[menu.main]]
+    name = "Section 1"
+    identifier = "section1"
+    url = "/section1/"
+    weight = 5
+[[menu.main]]
+    name = "Section 2"
+    identifier = "section2"
+    url = "/section2/"
+    weight = 6
+[[menu.main]]
+    name = "Blog"
+    identifier = "blog"
+    url = "/blog/"
+    weight = 10

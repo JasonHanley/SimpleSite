@@ -1,0 +1,58 @@
+/* Phones (portrait) */
+@media screen and (max-width: 600px) {
+
+    header {
+        height: 56px;
+        background-image: url("/img/bg1-sm.jpg");
+    }
+
+    header section a.title {
+        font-size: 24px;
+        margin: 8px 0 4px 0;
+        padding: 6px;
+    }
+
+    header.unpin, nav.unpin, main.unpin, footer.unpin {
+        transform: translateY(-56px);
+    }
+
+    nav {
+        top: 56px;
+        height: 48px;
+    }
+
+    nav a {
+        height: 48px;
+        line-height: 48px;
+    }
+
+    main {
+        padding-top: 102px;
+    }
+
+    main section {
+        padding: 4px 4px 0 4px;
+    }
+
+    main section a {
+        /* margin:0 !important; */
+    }
+
+    .hidden-phone {
+        display: none;
+    }
+
+    img.title-photo {
+        max-width: 40%;
+        margin: 0 0 4px 4px;
+    }
+
+    img.pixels-photo {
+        width: 30%;
+    }
+
+    div.soundcloud {
+        width:100%;
+    }
+
+}

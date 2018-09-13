@@ -1,0 +1,15 @@
+<header id="header">
+    <section>
+        <a href="/" class="title">My Simple Site</a>
+    </section>
+</header>
+<nav id="nav">
+    <section>
+    {{- $currentPage := . -}}
+    {{- range .Site.Menus.main.ByWeight }}
+        {{ $idenfifer := .Identifier }}
+        {{ $isActive := or (in $currentPage.URL (printf "/%s/" $idenfifer)) ($currentPage.IsMenuCurrent "main" .) }}
+        <a class="sidebar-nav-item{{if $isActive }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+    {{- end }}
+    </section>
+</nav>

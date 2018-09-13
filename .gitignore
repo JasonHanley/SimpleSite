@@ -1,0 +1,19 @@
+# IntelliJ
+.idea
+
+# Local-specific scripts
+/*.bat
+
+# Hugo folders
+/public
+/resources/_gen
+
+## OS Files
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# OSX
+.DS_Store

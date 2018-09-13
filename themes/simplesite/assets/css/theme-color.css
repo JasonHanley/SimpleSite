@@ -1,0 +1,72 @@
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+main {
+    background-color: rgb(255, 255, 255);
+}
+
+a {
+    color: slategray;
+}
+
+header {
+    background-color: darkslategray;
+    color: rgb(255, 255, 255);
+}
+
+header section a.title {
+    color: rgb(255, 255, 255);
+    background-color: rgba(112, 128, 144, 0.5);
+}
+
+button, nav {
+    background-color: slategray;
+    color: rgb(255, 255, 255);
+}
+
+button:disabled {
+    background-color: rgb(240, 240, 240);
+    color: rgb(120, 120, 120);
+}
+
+nav a {
+    color: rgb(255, 255, 255);
+}
+
+nav a.active {
+    background-color: lightslategray;
+}
+
+main section.alt {
+    background-color: rgb(240, 240, 240);
+}
+
+main section.alt.alt2 {
+    background-color: slategray;
+    color: rgb(255, 255, 255);
+}
+
+main section.alternating:nth-child(even) article {
+    background-color: rgb(240, 240, 240);
+}
+
+footer {
+    color: rgb(150, 150, 150);
+}
+
+.blog h3 {
+    color: rgb(150, 150, 150);
+}
+
+ul.pagination li a {
+    background-color: rgb(240, 240, 240);
+}
+
+ul.pagination li a:hover {
+    background-color: rgb(220, 220, 220);
+}
+
+ul.pagination li.active a {
+    color: rgb(80, 80, 80);
+}

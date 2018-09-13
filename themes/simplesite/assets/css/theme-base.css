@@ -1,0 +1,311 @@
+/*
+    A very lightweight Material-like theme
+
+    No attention is given to "pixel-perfectness", just minimal styling to make it look nice on most popular devices.
+ */
+
+body {
+    margin: 0;
+    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    font-size: 16px;
+    color: rgb(80, 80, 80);
+}
+
+p {
+    margin: 16px 0;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 16px 0;
+}
+
+h2 {
+    font-size: 20px;
+    margin: 12px 0;
+}
+
+h3 {
+    font-size: 16px;
+    margin: 8px 0;
+}
+
+input, textarea, select, button {
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+img {
+    max-width: 100%;
+}
+
+button {
+    border: 1px solid transparent;
+    border-radius: 2px;
+    height: 32px;
+    line-height: 24px;
+    margin: 0 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    outline-style: none;
+    box-shadow: 0 0 4px 1px rgba(0, 0, 0, .2)
+}
+
+button:focus {
+    border-color: rgba(0, 0, 0, 0.22);
+    box-shadow: 0 0 4px 1px rgba(0, 0, 0, .5)
+}
+
+button:disabled {
+    cursor: auto;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 112px;
+    z-index: 3;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+    background-image: url("/img/bg1.jpg");
+    background-size: cover;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+}
+
+header, nav, main, footer {
+    transition: transform 0.15s ease-in-out;
+}
+
+header.unpin, nav.unpin, main.unpin, footer.unpin {
+    transform: translateY(-116px);
+}
+
+header.pin, nav.pin, main.pin, footer.pin {
+    transform: translateY(0);
+}
+
+header section,nav section {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+}
+
+header section > span > * {
+    vertical-align: text-top;
+}
+
+header section a.title {
+    margin: 32px 0 8px 0;
+    padding: 8px;
+    font-size: 28px;
+    font-weight: normal;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+nav {
+    display: block;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    top: 112px;
+    height: 64px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+
+nav a {
+    height: 64px;
+    line-height: 64px;
+    padding: 0 16px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0;
+}
+
+main {
+    width: 100%;
+    padding-top: 176px;
+}
+
+main section.alt {
+    margin-top: 16px;
+    padding-bottom: 16px;
+}
+
+main section.alt:first-child {
+    margin-top: 0;
+}
+
+main section.alternating {
+    /* padding-bottom:16px; */
+}
+
+main section.alternating article {
+    padding-bottom: 32px;
+}
+
+main section article {
+    margin: 0 auto;
+    max-width: 1166px;
+    padding: 16px 16px 0 16px;
+}
+
+article.blog img.top {
+    position:relative;
+    left:50%;
+    transform:translate(-50%, 0);
+}
+
+article.blog h1 {
+    margin: 16px 0 8px 0;
+}
+
+blockquote {
+    font-style: italic;
+}
+
+blockquote p {
+    padding-left: 4px;
+    border-left: 1px solid rgb(180, 180, 180);
+}
+
+footer {
+    width: 100%;
+    padding: 16px 0;
+    text-align: center;
+    font-size: 12px;
+}
+
+.summary .date {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+h3.tags {
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    line-height:28px;
+}
+
+h3.tags span {
+}
+
+h3.tags a {
+    /*font-size: 14px;*/
+    /*font-weight: initial;*/
+    margin: 0 2px;
+}
+
+img.title-photo {
+    max-width: 265px;
+    float: right;
+    margin: 0 0 8px 8px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+
+img.pixels-photo {
+    width: 31%;
+    margin: 8px 8px 8px 0;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+
+div.soundcloud {
+    display: inline-block;
+    margin: 8px 8px 8px 0;
+    width: 31%;
+    height: auto;
+}
+
+.summary .thumbnail {
+    width: 120px;
+    margin-right: 16px;
+    text-align: center;
+    vertical-align: middle;
+    float: left;
+}
+
+.summary .thumbnail img {
+    object-fit: cover;
+    width: 100%;
+    height: 80px;
+}
+
+/* Pagination */
+
+div.pagination {
+    padding: 32px 0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+ul.pagination {
+    margin: 0 auto;
+    padding: 0;
+    display: inline-block;
+    list-style: none;
+}
+
+ul.pagination li {
+    display: inline-block;
+}
+
+ul.pagination li a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 4px 6px;
+}
+
+/* Utility */
+
+.space-left {
+    margin-left: 16px;
+}
+
+.space-right {
+    margin-right: 16px;
+}
+
+.flex {
+    display: flex;
+}
+
+.centered-text {
+    text-align: center;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.invalid {
+    color: red;
+    text-decoration: line-through;
+}
+
+/* Large screens */
+@media screen and (min-width: 1700px) {
+
+    header section,nav section {
+        max-width: 1600px;
+    }
+
+    main section article {
+        max-width: 1566px;
+    }
+
+}

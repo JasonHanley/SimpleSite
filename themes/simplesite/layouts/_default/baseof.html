@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+{{ partial "head.html" . -}}
+<body>
+{{ partial "header.html" . }}
+<main id="main">
+{{- block "main" . }}{{- end }}
+</main>
+{{ partial "footer.html" . }}
+{{/*<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">*/}}
+<!--<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
+</body>
+{{ $combinedJs := slice (resources.Get "js/scroll.js") | resources.Concat "js/script.js" -}}
+<script src="{{ ($combinedJs | minify | fingerprint "md5").RelPermalink }}"></script>
+</html>

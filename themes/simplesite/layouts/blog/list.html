@@ -1,0 +1,30 @@
+{{ define "main" }}
+    <section>
+        <article>
+            <h1>SimpleSites's Blog</h1>
+            <p><span class="subheader">All about
+                <a href="/tags/software/">Software</a>,
+                <a href="/tags/simplicity/">Simplicity</a>,
+                <a href="/tags/minimalism/">Minimalism</a>,
+                <a href="/tags/zen/">Zen</a>, and more...
+            </span></p>
+
+        </article>
+    </section>
+        {{- $paginator := .Paginate (where .Pages "Type" "blog") -}}
+        {{- range $paginator.Pages }}
+    <section class="alternating">
+        <article>
+        <div class="summary">
+            <div class="thumbnail">{{ if .Params.thumbnail }}<a href="{{.URL}}"><img src="/blog/assets/{{ .Params.thumbnail }}"></a>{{ end }}</div>
+            <h2><a href="{{.URL}}">{{ .Title }}</a> <span class="date">({{ .Date.Format "January 2, 2006" }})</span></h2>
+            {{- if gt (len .Summary) 250 -}}
+            {{- slicestr .Summary 0 250 | markdownify -}}
+            {{- else }}{{ .Summary -}}
+            {{- end }} <a href="{{ .URL }}">(more...)</a>
+        </div>
+        </article>
+    </section>
+    {{- end }}
+        <div class="pagination">{{ template "_internal/pagination.html" . }}</div>
+{{ end }}
