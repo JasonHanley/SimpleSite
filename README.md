@@ -2,6 +2,8 @@
 
 A very simple statically-generated personal site with a blog.
 
+Live Preview: [simplesite.jasonhanley.com](https://simplesite.jasonhanley.com/)
+
 ## Getting Started
 
 * [Install Hugo](https://gohugo.io/getting-started/installing/)
@@ -28,4 +30,4 @@ A very simple statically-generated personal site with a blog.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License.
